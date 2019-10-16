@@ -1,17 +1,26 @@
 package ca.fireball1725.firelib2;
 
+import ca.fireball1725.firelib2.util.RegistrationHelper;
 import net.minecraft.block.Block;
-import net.minecraftforge.eventbus.EventBus;
+import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.annotation.OverridingMethodsMustInvokeSuper;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public abstract class FireMod {
   private final Logger LOGGER;
   private final String MODID;
-  private final EventBus EVENTBUS;
+<<<<<<< HEAD
+=======
+  private final IEventBus EVENTBUS;
 
   protected FireMod(String modId) {
     this.MODID = ModLoadingContext.get().getActiveNamespace();
@@ -19,6 +28,7 @@ public abstract class FireMod {
     this.EVENTBUS = FMLJavaModLoadingContext.get().getModEventBus();
     FireLib2.registerMod(this);
   }
+>>>>>>> feature/registration
 
   public abstract ArrayList<Block> getBlocks();
   public abstract ArrayList<Item> getItems();
@@ -44,6 +54,9 @@ public abstract class FireMod {
 
     FireLib2.FIREMODS.put(Objects.requireNonNull(getModId()), this);
 
+<<<<<<< HEAD
+=======
     FireLib2.LOGGER.info("Added mod {}", getModId());
+>>>>>>> feature/registration
   }
 }

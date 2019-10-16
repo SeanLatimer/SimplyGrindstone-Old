@@ -1,3 +1,10 @@
 {
-  "model": "firelib2:testblock-dark"
+  "variants": {
+    "facing=north": { "model": "simplygrindstone:block/testblock" },
+    "facing=south": { "model": "simplygrindstone:block/testblock", "y": 180 },
+    "facing=west": { "model": "simplygrindstone:block/testblock", "y": 270 },
+    "facing=east": { "model": "simplygrindstone:block/testblock", "y": 90 },
+    "facing=up": { "model": "simplygrindstone:block/testblock", "x": -90 },
+    "facing=down": { "model": "simplygrindstone:block/testblock", "x": 90 }
+  }
 }

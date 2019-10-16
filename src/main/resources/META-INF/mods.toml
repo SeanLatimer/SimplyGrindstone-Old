@@ -15,16 +15,50 @@ description='''
 Light mod for Minecraft, adds light fixtures and different light bulbs
 '''
 
-[[dependencies.hue]]
+[[mods]]
+modId="firelib2"
+version="{{version}}"
+displayName="FireLib2"
+updateJSONURL="http://myurl.me/"
+displayURL="http://example.com/"
+logoFile="hue_logo.png"
+credits=""
+authors="FireBall1725"
+description='''
+Light mod for Minecraft, adds light fixtures and different light bulbs
+'''
+
+[[dependencies.simplygrindstone]]
+    modId="firelib2"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.simplygrindstone]]
     modId="forge"
     mandatory=true
     versionRange="[28,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.hue]]
+[[dependencies.simplygrindstone]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[1.14,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.firelib2]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.firelib2]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14,)"
     ordering="NONE"
     side="BOTH"
