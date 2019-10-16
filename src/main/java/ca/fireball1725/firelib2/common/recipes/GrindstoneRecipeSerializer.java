@@ -21,7 +21,8 @@ public class GrindstoneRecipeSerializer<T extends GrindstoneRecipe> extends Forg
   private final GrindstoneRecipeSerializer.IFactory<T> factory;
 
   GrindstoneRecipeSerializer(GrindstoneRecipeSerializer.IFactory<T> factory) {
-    this.factory = factory;
+        this.factory = factory;
+        setRegistryName("grindstone");
   }
 
   @Override

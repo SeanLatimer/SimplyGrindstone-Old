@@ -1,6 +1,7 @@
 package ca.fireball1725.simplygrindstone.common.blocks.misc;
 
 import ca.fireball1725.firelib2.common.blocks.BlockBase;
+import ca.fireball1725.firelib2.util.RotationType;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
@@ -14,5 +15,10 @@ public class Crank extends BlockBase {
     );
     setRegistryName("crank");
     setCanRotate(false);
+  }
+
+  @Override
+  public RotationType getRotationType() {
+    return RotationType.NONE;
   }
 }

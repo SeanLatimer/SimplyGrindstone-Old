@@ -65,7 +65,7 @@ public class GrindstoneRecipe implements IRecipe<IInventory> {
   @Override
   @Nonnull
   public IRecipeSerializer<?> getSerializer() {
-    return RecipeSubscriber.grindstone;
+    return Recipes.GRINDSTONE.getSerializer();
   }
 
   @Override

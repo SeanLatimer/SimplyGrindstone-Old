@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum Recipes {
-    //CRUSHER(() -> ne﻿w CrusherRecipeSerializer<>(CrusherRecipe::new))
+    GRINDSTONE(() -> new GrindstoneRecipeSerializer<>(GrindstoneRecipe::new))
     ;
 
     private final IRecipeSerializer serializer;

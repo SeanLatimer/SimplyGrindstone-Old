@@ -1,9 +1,11 @@
 package ca.fireball1725.firelib2;
 
+import ca.fireball1725.firelib2.common.recipes.Recipes;
 import ca.fireball1725.firelib2.util.RegistrationHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -24,6 +26,7 @@ public class FireLib2 extends FireMod {
 
   public FireLib2() {
     super(ModLoadingContext.get().getActiveNamespace());
+    OBJLoader.INSTANCE.addDomain();
   }
 
   public static void registerMod(FireMod fireMod) {
@@ -50,7 +53,7 @@ public class FireLib2 extends FireMod {
   }
 
   @Override
-  public ArrayList<IRecipeSerializer> getRecipeSerializers() {
-    return null;
+  public ArrayList<IRecipeSerializer<?>> getRecipeSerializers() {
+    return Recipes.toList();
   }
 }

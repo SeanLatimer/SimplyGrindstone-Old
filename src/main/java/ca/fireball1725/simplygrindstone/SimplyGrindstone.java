@@ -32,7 +32,7 @@ public class SimplyGrindstone extends FireMod {
   }
 
   @Override
-  public ArrayList<IRecipeSerializer> getRecipeSerializers() {
+  public ArrayList<IRecipeSerializer<?>> getRecipeSerializers() {
     return null;
   }
 }

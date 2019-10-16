@@ -1,0 +1,7 @@
+{
+  "parent": "simplygrindstone:block/crank",
+  "textures": {
+    "all": "blocks/oak_planks"
+  },
+  "variants": {}
+}
