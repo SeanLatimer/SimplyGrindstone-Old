@@ -66,17 +66,10 @@ public abstract class BlockBase extends Block {
     this.canRotate = canRotate;
   }
 
-
-
-
   @Override
   protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-    builder.add(BlockStateProperties.FACING);
+    builder.add(getProperties());
   }
-
-
-
-
 
   public static Direction getFacingFromEntity(BlockPos clickedBlock, LivingEntity entity) {
     return Direction.getFacingFromVector((float) (entity.posX - clickedBlock.getX()), (float) (entity.posY - clickedBlock.getY()), (float) (entity.posZ - clickedBlock.getZ()));

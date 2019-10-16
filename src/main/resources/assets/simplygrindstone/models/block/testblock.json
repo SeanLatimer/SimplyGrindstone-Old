@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "simplygrindstone:block/top-light",
+    "north": "simplygrindstone:block/front-light",
+    "east": "simplygrindstone:block/side1-light",
+    "south": "simplygrindstone:block/side2-light",
+    "west": "simplygrindstone:block/side3-light",
+    "up": "simplygrindstone:block/top-light",
+    "down": "simplygrindstone:block/bottom-light"
+  }
+}
