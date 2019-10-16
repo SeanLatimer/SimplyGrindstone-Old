@@ -12,25 +12,25 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum Blocks implements IFireBlock {
-  GRINDSTONE(Grindstone::new),
-  CRANK(Crank::new),
-  ;
+    GRINDSTONE(Grindstone::new),
+    CRANK(Crank::new),
+    ;
 
-  private final BlockBase block;
+    private final BlockBase block;
 
-  Blocks(Supplier<BlockBase> blockSupplier) {
-    Objects.requireNonNull(blockSupplier);
-    this.block = blockSupplier.get();
-  }
+    Blocks(Supplier<BlockBase> blockSupplier) {
+        Objects.requireNonNull(blockSupplier);
+        this.block = blockSupplier.get();
+    }
 
-  @Override
-  public BlockBase getBlock() {
-    return this.block;
-  }
+    public static ArrayList<Block> toList() {
+        ArrayList<Block> blocks = new ArrayList<>();
+        EnumSet.allOf(Blocks.class).forEach(b -> blocks.add(b.block));
+        return blocks;
+    }
 
-  public static ArrayList<Block> toList() {
-    ArrayList<Block> blocks = new ArrayList<>();
-    EnumSet.allOf(Blocks.class).forEach(b -> blocks.add(b.block));
-    return blocks;
-  }
+    @Override
+    public BlockBase getBlock() {
+        return this.block;
+    }
 }

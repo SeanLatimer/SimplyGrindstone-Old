@@ -12,31 +12,32 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 public abstract class FireMod {
-  private final Logger LOGGER;
-  private final String MODID;
-  private final IEventBus EVENTBUS;
+    private final Logger LOGGER;
+    private final String MODID;
+    private final IEventBus EVENTBUS;
 
-  protected FireMod(String modId) {
-    this.MODID = ModLoadingContext.get().getActiveNamespace();
-    this.LOGGER = LogManager.getLogger(this.MODID);
-    this.EVENTBUS = FMLJavaModLoadingContext.get().getModEventBus();
-    FireLib2.registerMod(this);
-  }
+    protected FireMod(String modId) {
+        this.MODID = ModLoadingContext.get().getActiveNamespace();
+        this.LOGGER = LogManager.getLogger(this.MODID);
+        this.EVENTBUS = FMLJavaModLoadingContext.get().getModEventBus();
+        FireLib2.registerMod(this);
+    }
 
-  public abstract ArrayList<Block> getBlocks();
-  public abstract ArrayList<Item> getItems();
+    public abstract ArrayList<Block> getBlocks();
 
-  public abstract ArrayList<IRecipeSerializer<?>> getRecipeSerializers();
+    public abstract ArrayList<Item> getItems();
 
-  public Logger getLogger() {
-    return LOGGER;
-  }
+    public abstract ArrayList<IRecipeSerializer<?>> getRecipeSerializers();
 
-  public String getModId() {
-    return MODID;
-  }
+    public Logger getLogger() {
+        return LOGGER;
+    }
 
-  public IEventBus getEventBus() {
-    return EVENTBUS;
-  }
+    public String getModId() {
+        return MODID;
+    }
+
+    public IEventBus getEventBus() {
+        return EVENTBUS;
+    }
 }

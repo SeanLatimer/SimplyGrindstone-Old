@@ -6,18 +6,18 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
 public class Grindstone extends BlockBase {
-  public Grindstone() {
-    super(Properties.create(Material.ROCK)
-      .sound(SoundType.METAL)
-      .hardnessAndResistance(2.0f)
-    );
-    setRegistryName("grindstone");
-    setCanRotate(true);
-  }
+    public Grindstone() {
+        super(Properties.create(Material.ROCK)
+                .sound(SoundType.METAL)
+                .hardnessAndResistance(2.0f)
+        );
+        setRegistryName("grindstone");
+        setCanRotate(true);
+    }
 
-  @Override
-  public RotationType getRotationType() {
-    return RotationType.HORIZONTAL;
-  }
+    @Override
+    public RotationType getRotationType() {
+        return RotationType.HORIZONTAL;
+    }
 
 }

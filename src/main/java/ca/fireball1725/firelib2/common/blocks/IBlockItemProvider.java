@@ -5,5 +5,5 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
 public interface IBlockItemProvider {
-  BlockItem provideBlockItem(Block block, Item.Properties itemProperties);
+    BlockItem provideBlockItem(Block block, Item.Properties itemProperties);
 }

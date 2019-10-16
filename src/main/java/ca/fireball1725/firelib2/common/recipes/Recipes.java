@@ -8,8 +8,7 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum Recipes {
-    GRINDSTONE(() -> new GrindstoneRecipeSerializer<>(GrindstoneRecipe::new))
-    ;
+    GRINDSTONE(() -> new GrindstoneRecipeSerializer<>(GrindstoneRecipe::new));
 
     private final IRecipeSerializer serializer;
 
